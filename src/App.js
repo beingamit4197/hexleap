@@ -1,16 +1,9 @@
-import "./App.css";
+import React from "react";
 
 function App() {
   return (
-    <div className="bg-gray-200 h-screen flex items-center justify-center">
-      <div className="bg-red p-8 rounded shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800">
-          Hello, Tailwind CSS!
-        </h1>
-        <p className="text-red-600 mt-2">
-          This is a sample React app with Tailwind CSS.
-        </p>
-      </div>
+    <div className="bg-blue-500 p-4">
+      <p className="text-red-800 font-bold">Hello Tailwind CSS!</p>
     </div>
   );
 }
