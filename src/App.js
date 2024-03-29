@@ -1,9 +1,13 @@
-import React from "react";
+import "./App.css";
+import Home from "./components/Home";
+import Space from "./components/Space";
 
 function App() {
   return (
-    <div className="bg-blue-500 p-4">
-      <p className="text-red-800 font-bold">Hello Tailwind CSS!</p>
+    <div className="bg-gray-700 items-center text-white justify-center">
+      <Space lg />
+      <Home />
+      <Space lg />
     </div>
   );
 }

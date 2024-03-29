@@ -1,0 +1,20 @@
+/* CSS */
+.half-circle {
+  position: absolute;
+  bottom: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.half-circle.left {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.half-circle.right {
+  right: 0;
+  transform: translateX(50%);
+}
