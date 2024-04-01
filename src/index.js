@@ -4,9 +4,12 @@ import "./index.css";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const darkTheme = true;
 root.render(
   <React.StrictMode>
-    <App />
+    <div className={darkTheme ? "dark" : ""}>
+      <App />
+    </div>
   </React.StrictMode>
 );
 

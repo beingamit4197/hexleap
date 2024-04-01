@@ -82,8 +82,8 @@ const Home = ({ theme, toggleTheme }) => {
               <img src={item.img} alt={item.playerName} />
               <p className="mt-2 text-sm font-semibold">{item.playerName}</p>
               <div
-                className={`bg-${
-                  theme === "light" ? "gray-300" : "gray-700"
+                className={`${
+                  theme === "light" ? "bg-gray-300" : "bg-gray-700"
                 } p-2 mt-5 shadow-lg h-700 w-full`}
               >
                 <div className="flex justify-between">
@@ -98,7 +98,7 @@ const Home = ({ theme, toggleTheme }) => {
             </Card>
           ))}
           <div
-            className={`bg-${theme === "light" ? "white" : "gray-600"} ${
+            className={`${theme === "light" ? "bg-white" : "bg-gray-600"} ${
               theme === "light" ? "text-black" : "text-white"
             } p-2 text-xs m-2 shadow-lg relative w-full`}
           >

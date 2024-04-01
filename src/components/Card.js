@@ -2,24 +2,27 @@ import React from "react";
 import "../Styles/Card.css";
 
 const Card = ({ children, theme }) => {
-  const cardClass =
-    theme === "dark" ? "bg-gray-600 text-white" : "bg-white text-gray-800";
-
   return (
-    <div className={`p-2 text-xs m-2 shadow-lg w-full ${cardClass}`}>
+    <div
+      className={`${theme === "light" ? "bg-white" : "bg-gray-600"} ${
+        theme === "light" ? "text-black" : "text-white"
+      } p-2 text-xs m-2 shadow-lg w-full`}
+    >
       {children}
     </div>
   );
 };
 
 export const CardSecond = ({ children, theme }) => {
-  const cardClass =
-    theme === "dark"
-      ? "bg-gradient-to-b from-green-950 to-purple-950 text-white"
-      : "bg-white text-gray-800";
-
   return (
-    <div className={`p-10 ... text-xs m-2 shadow-lg h-700 w-full ${cardClass}`}>
+    <div
+      className={`${
+        theme === "light"
+          ? "bg-white"
+          : "bg-gradient-to-b from-green-950 to-purple-950"
+      } ${theme === "light" ? "text-black" : "text-white"}
+      p-10 ... text-xs m-2 shadow-lg h-700 w-full`}
+    >
       {children}
     </div>
   );
@@ -33,12 +36,17 @@ export const CollectionCard = ({
   buttonText,
   theme,
 }) => {
-  const cardClass = theme === "dark" ? "bg-gray-600" : "bg-white";
-  const textColor = theme === "dark" ? "text-white" : "text-gray-800";
-
   return (
-    <div className={`w-400 relative m-5 ${textColor}`}>
-      <div className={`shadow-lg p-1 ${cardClass}`}>
+    <div
+      className={`w-400 relative m-5 ${
+        theme === "light" ? "text-black" : "text-white"
+      }`}
+    >
+      <div
+        className={`shadow-lg p-1   ${
+          theme === "light" ? "bg-white" : "bg-gray-600"
+        }`}
+      >
         <p className="mb-2 border-b border-dashed border-gray-400 relative">
           <img src={image} alt={title} />
         </p>
@@ -53,13 +61,17 @@ export const CollectionCard = ({
           theme === "light" ? "bg-white" : "bg-purple-950"
         }`}
       ></span>
-      <div className={`shadow-lg p-4 ${cardClass}`}>
+      <div
+        className={`shadow-lg p-4   ${
+          theme === "light" ? "bg-white" : "bg-gray-600"
+        }`}
+      >
         <p className="text-xl font-semibold mb-2">{title}</p>
         <p className="text-sm text-gray-400 mb-4">{time}</p>
         <p className="text-sm text-gray-400 mb-4">{location}</p>
         <button
           className={`py-2 px-5 w-full ${
-            theme === "dark" ? "bg-black text-white" : "bg-gray-800 text-white"
+            theme === "dark" ? "bg-black text-white" : "bg-gray-700 text-white"
           }`}
         >
           {buttonText}
